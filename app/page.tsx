@@ -254,7 +254,7 @@ export default function Portfolio() {
         >
           {/* Hero */}
           <section className="mb-32 md:mb-40">
-            <h1 className="mb-8 text-4xl font-light leading-[1.15] tracking-tight text-balance md:text-5xl lg:text-6xl">
+            <h1 className="font-round mb-8 text-4xl leading-[1.15] tracking-tight text-balance md:text-5xl lg:text-6xl">
               {content[selectedTrack].heading}
             </h1>
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
