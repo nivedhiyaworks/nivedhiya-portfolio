@@ -134,3 +134,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom font utility */
+.font-round {
+  font-family: "RoundBlock", system-ui, sans-serif;
+}
