@@ -81,9 +81,13 @@ export default function Portfolio() {
   if (!selectedTrack) {
     return (
       <div className="relative bg-background text-foreground" style={{ minHeight: "200vh" }}>
-        <header className="fixed left-6 top-6 z-30 md:left-12 md:top-12">
-          <div className="text-xs font-medium uppercase tracking-[0.25em] text-muted-foreground/60">NP</div>
-        </header>
+        <<header className="fixed left-6 top-6 z-30 md:left-12 md:top-12">
+  <img
+    src="/logo.svg"
+    alt="Nivedhiya J Panicker logo"
+    className="h-7 w-auto"
+  />
+</header>
 
         <div
           className="fixed left-1/2 top-1/3 z-20 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
