@@ -110,7 +110,7 @@ export default function Portfolio() {
                 transform: isHovering === "ux" ? "translateX(12px)" : "translateX(0px)",
               }}
             >
-              <h2 className="mb-8 text-5xl font-light tracking-tight md:mb-12 md:text-6xl lg:text-7xl">Product & UX</h2>
+              <h2 className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl">Product & UX</h2>
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground/60 md:text-base">
                 User-centered design for digital products
               </p>
@@ -134,7 +134,7 @@ export default function Portfolio() {
                 transform: isHovering === "visual" ? "translateX(-12px)" : "translateX(0px)",
               }}
             >
-              <h2 className="mb-8 text-5xl font-light tracking-tight md:mb-12 md:text-6xl lg:text-7xl">UI & Brand</h2>
+              <h2 className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl">UI & Brand</h2>
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground/60 md:text-base">
                 Visual identity and interface design
               </p>
@@ -144,7 +144,7 @@ export default function Portfolio() {
 
         <main className="relative z-0 mx-auto max-w-4xl px-6 pt-[100vh] md:px-12">
           <section className="min-h-screen py-24 transition-opacity duration-700" style={{ opacity: scrollProgress }}>
-            <h2 className="mb-12 text-4xl font-light tracking-tight md:text-5xl">About Me</h2>
+           <h2 className="font-round mb-12 text-4xl tracking-tight md:text-5xl">About Me</h2>
             <div className="flex flex-col gap-12 md:flex-row md:gap-12">
               <div className="flex-1 space-y-8">
                 <p className="text-base leading-loose text-muted-foreground/100">
