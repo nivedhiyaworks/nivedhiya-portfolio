@@ -196,7 +196,7 @@ export default function Portfolio() {
               </div>
               <div className="flex w-40 flex-shrink-0 items-start md:pt-2">
                 <img
-                  src="/professional-portrait.png"
+                  src="/nivedhiya.jpg"
                   alt="Nivedhiya J Panicker"
                   className="h-auto w-full object-cover"
                 />
