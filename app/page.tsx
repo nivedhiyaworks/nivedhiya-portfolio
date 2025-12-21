@@ -97,26 +97,40 @@ export default function Portfolio() {
           <div className="text-sm font-medium tracking-wide text-muted-foreground/70">NIVEDHIYA J PANICKER</div>
         </div>
 
-        <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row">
-          <button
-            className="group relative z-0 flex flex-1 ..."
-            onClick={() => setSelectedTrack("ux")}
-            onMouseEnter={() => setIsHovering("ux")}
-            onMouseLeave={() => setIsHovering(null)}
-            className="group relative flex flex-1 flex-col items-center justify-center border-b border-border/40 bg-background px-8 py-32 text-center transition-all duration-700 ease-out md:border-b-0 md:border-r md:py-0"
-            style={{
-              opacity: isHovering === "visual" ? 0.3 : 1,
-              filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
-              transform: `translateX(-${scrollProgress * 100}%)`,
-            }}
-          >
+        <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row divide-x-0">
+          <div
+  className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 py-32 text-center transition-all duration-700 ease-out md:py-0"
+  style={{
+    opacity: isHovering === "visual" ? 0.3 : 1,
+    filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
+    transform: `translateX(-${scrollProgress * 100}%)`,
+  }}
+>
+
             <div
               className="flex flex-col items-center transition-transform duration-700 ease-out"
               style={{
                 transform: isHovering === "ux" ? "translateX(12px)" : "translateX(0px)",
               }}
             >
-              <h2 className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl">Product & UX</h2>
+              <h2
+  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer focus:outline-none"
+  onClick={() => setSelectedTrack("ux")}
+  onMouseEnter={() => setIsHovering("ux")}
+  onMouseLeave={() => setIsHovering(null)}
+  tabIndex={0}
+  role="button"
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault()
+      setSelectedTrack("ux")
+    }
+  }}
+>
+  Product & UX
+</h2>
+
+
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground/60 md:text-base">
                 User-centered design for digital products
               </p>
@@ -125,8 +139,6 @@ export default function Portfolio() {
 
           <button
             onClick={() => setSelectedTrack("visual")}
-            onMouseEnter={() => setIsHovering("visual")}
-            onMouseLeave={() => setIsHovering(null)}
             className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 py-32 text-center transition-all duration-700 ease-out md:py-0"
             style={{
               opacity: isHovering === "ux" ? 0.3 : 1,
@@ -140,7 +152,24 @@ export default function Portfolio() {
                 transform: isHovering === "visual" ? "translateX(-12px)" : "translateX(0px)",
               }}
             >
-              <h2 className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl">UI & Brand</h2>
+<h2
+  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer focus:outline-none"
+  onClick={() => setSelectedTrack("visual")}
+  onMouseEnter={() => setIsHovering("visual")}
+  onMouseLeave={() => setIsHovering(null)}
+  tabIndex={0}
+  role="button"
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault()
+      setSelectedTrack("visual")
+    }
+  }}
+>
+  UI & Brand
+</h2>
+
+
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground/60 md:text-base">
                 Visual identity and interface design
               </p>
