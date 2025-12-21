@@ -97,9 +97,9 @@ export default function Portfolio() {
           <div className="text-sm font-medium tracking-wide text-muted-foreground/70">NIVEDHIYA J PANICKER</div>
         </div>
 
-        <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row divide-x-0">
+        <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row overflow-hidden">
           <div
-  className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 py-32 text-center transition-all duration-700 ease-out md:py-0"
+  className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 pointer-events-none"
   style={{
     opacity: isHovering === "visual" ? 0.3 : 1,
     filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
@@ -108,14 +108,20 @@ export default function Portfolio() {
 >
 
             <div
-              className="flex flex-col items-center transition-transform duration-700 ease-out"
-              style={{
-                transform: isHovering === "ux" ? "translateX(12px)" : "translateX(0px)",
-              }}
-            >
+  className="flex flex-col items-center transition-transform duration-700 ease-out pointer-events-none"
+  style={{
+    transform: isHovering === "ux" ? "translateX(12px)" : "translateX(0px)",
+  }}
+>
+
               <h2
-  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer focus:outline-none"
-  onClick={() => setSelectedTrack("ux")}
+                style={{
+  opacity: isHovering === "visual" ? 0.3 : 1,
+  filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
+}}
+
+  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer pointer-events-auto"
+
   onMouseEnter={() => setIsHovering("ux")}
   onMouseLeave={() => setIsHovering(null)}
   tabIndex={0}
@@ -135,7 +141,7 @@ export default function Portfolio() {
                 User-centered design for digital products
               </p>
             </div>
-          </button>
+        
 
           <button
             onClick={() => setSelectedTrack("visual")}
@@ -174,7 +180,7 @@ export default function Portfolio() {
                 Visual identity and interface design
               </p>
             </div>
-          </button>
+          
         </div>
 
         <main className="relative z-0 mx-auto max-w-4xl px-6 pt-[100vh] md:px-12">
