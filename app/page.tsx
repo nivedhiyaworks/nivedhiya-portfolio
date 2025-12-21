@@ -100,11 +100,7 @@ export default function Portfolio() {
         <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row overflow-hidden">
           <div
   className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 pointer-events-none"
-  style={{
-    opacity: isHovering === "visual" ? 0.3 : 1,
-    filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
-    transform: `translateX(-${scrollProgress * 100}%)`,
-  }}
+ <div className="relative flex flex-1 items-center justify-center bg-background px-8">
 >
 
             <div
@@ -115,26 +111,22 @@ export default function Portfolio() {
 >
 
               <h2
-                style={{
-  opacity: isHovering === "visual" ? 0.3 : 1,
-  filter: isHovering === "visual" ? "blur(2px)" : "blur(0px)",
-}}
-
-  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer pointer-events-auto"
-
+  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer transition-all duration-500 ease-out"
+  style={{
+    transform: isHovering === "ux"
+      ? "translateY(-8px)"
+      : "translateY(0px)",
+    opacity: isHovering && isHovering !== "ux" ? 0.35 : 1,
+  }}
   onMouseEnter={() => setIsHovering("ux")}
   onMouseLeave={() => setIsHovering(null)}
+  onClick={() => setSelectedTrack("ux")}
   tabIndex={0}
   role="button"
-  onKeyDown={(e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault()
-      setSelectedTrack("ux")
-    }
-  }}
 >
   Product & UX
 </h2>
+
 
 
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground/60 md:text-base">
@@ -149,7 +141,6 @@ export default function Portfolio() {
             style={{
               opacity: isHovering === "ux" ? 0.3 : 1,
               filter: isHovering === "ux" ? "blur(2px)" : "blur(0px)",
-              transform: `translateX(${scrollProgress * 100}%)`,
             }}
           >
             <div
@@ -159,18 +150,18 @@ export default function Portfolio() {
               }}
             >
 <h2
-  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer focus:outline-none"
-  onClick={() => setSelectedTrack("visual")}
+  className="font-round mb-8 text-5xl tracking-tight md:mb-12 md:text-6xl lg:text-7xl cursor-pointer transition-all duration-500 ease-out"
+  style={{
+    transform: isHovering === "visual"
+      ? "translateY(-8px)"
+      : "translateY(0px)",
+    opacity: isHovering && isHovering !== "visual" ? 0.35 : 1,
+  }}
   onMouseEnter={() => setIsHovering("visual")}
   onMouseLeave={() => setIsHovering(null)}
+  onClick={() => setSelectedTrack("visual")}
   tabIndex={0}
   role="button"
-  onKeyDown={(e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault()
-      setSelectedTrack("visual")
-    }
-  }}
 >
   UI & Brand
 </h2>
