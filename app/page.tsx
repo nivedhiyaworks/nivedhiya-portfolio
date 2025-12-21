@@ -81,17 +81,12 @@ export default function Portfolio() {
   if (!selectedTrack) {
     return (
       <div className="relative bg-background text-foreground" style={{ minHeight: "200vh" }}>
-        <header
-  style={{
-    position: "fixed",
-    top: 24,
-    left: 24,
-    zIndex: 9999,
-    background: "red",
-    padding: "8px",
-  }}
->
-  <img src="/logo.svg" alt="logo" style={{ height: 40 }} />
+        <header className="fixed top-6 left-6 z-[100]">
+  <img
+    src="/logo.svg"
+    alt="Nivedhiya J Panicker logo"
+    className="h-7 w-auto"
+  />
 </header>
 
 
@@ -102,8 +97,9 @@ export default function Portfolio() {
           <div className="text-sm font-medium tracking-wide text-muted-foreground/70">NIVEDHIYA J PANICKER</div>
         </div>
 
-        <div className="fixed inset-0 z-10 flex flex-col md:flex-row">
+        <div className="fixed inset-0 z-10 pointer-events-auto flex flex-col md:flex-row">
           <button
+            className="group relative z-0 flex flex-1 ..."
             onClick={() => setSelectedTrack("ux")}
             onMouseEnter={() => setIsHovering("ux")}
             onMouseLeave={() => setIsHovering(null)}
