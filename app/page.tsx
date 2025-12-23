@@ -68,21 +68,29 @@ export default function Portfolio() {
           {/* UX */}
           <div className="flex flex-1 items-center justify-center">
             <h2
-              className="font-round cursor-pointer text-5xl md:text-6xl lg:text-7xl transition-opacity hover:opacity-60"
-              onClick={() => setSelectedTrack("ux")}
-            >
-              Product & UX
-            </h2>
+                className="font-round cursor-pointer text-5xl md:text-6xl lg:text-7xl transition-all duration-300"
+                style={{
+                  transform: `translateY(-${scrollProgress * 24}px)`,
+                  opacity: 1 - scrollProgress * 0.8,
+                }}
+                onClick={() => setSelectedTrack("ux")}
+              >
+                Product & UX
+           </h2>
           </div>
 
           {/* Visual */}
           <div className="flex flex-1 items-center justify-center">
             <h2
-              className="font-round cursor-pointer text-5xl md:text-6xl lg:text-7xl transition-opacity hover:opacity-60"
+              className="font-round cursor-pointer text-5xl md:text-6xl lg:text-7xl transition-all duration-300"
+              style={{
+                transform: `translateY(-${scrollProgress * 40}px)`,
+                opacity: 1 - scrollProgress,
+              }}
               onClick={() => setSelectedTrack("visual")}
             >
               UI & Brand
-            </h2>
+          </h2>
           </div>
         </div>
 
