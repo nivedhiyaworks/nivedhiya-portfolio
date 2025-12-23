@@ -135,14 +135,14 @@ export default function Portfolio() {
             </div>
         
 
-          <div
-  className="group relative flex flex-1 flex-col items-center justify-center bg-background"
-  style={{
-    opacity: isHovering === "ux" ? 0.3 : 1,
-    filter: isHovering === "ux" ? "blur(2px)" : "blur(0px)",
-  }}
->
-
+          <button
+            onClick={() => setSelectedTrack("visual")}
+            className="group relative flex flex-1 flex-col items-center justify-center bg-background px-8 py-32 text-center transition-all duration-700 ease-out md:py-0"
+            style={{
+              opacity: isHovering === "ux" ? 0.3 : 1,
+              filter: isHovering === "ux" ? "blur(2px)" : "blur(0px)",
+            }}
+          >
             <div
               className="flex flex-col items-center transition-transform duration-700 ease-out"
               style={{
